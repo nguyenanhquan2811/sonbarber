@@ -83,13 +83,28 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-semibold text-sm transition-all duration-[250ms] ease hover:-translate-y-[2px]"
               style={{
-                background: "linear-gradient(135deg, var(--gold-500), var(--gold-600))",
+                background: "linear-gradient(135deg, var(--gold-400), var(--gold-600))",
                 color: "var(--dark-950)",
                 padding: "10px 24px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                cursor: "pointer",
                 borderRadius: "var(--radius-md)",
-                boxShadow: "var(--shadow-gold)",
+                boxShadow: "0 5px 10px var(--shadow-gold)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "linear-gradient(135deg, var(--gold-800), var(--gold-500))";
+                e.currentTarget.style.color = "var(--gold-200)";
+                e.currentTarget.style.boxShadow = "0 5px 50px var(--shadow-gold)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "linear-gradient(135deg, var(--gold-500), var(--gold-700))";
+                e.currentTarget.style.color = "var(--dark-950)";
               }}
             >
+              <Calendar size={20} />
               Đặt lịch ngay
             </a>
           </div>
@@ -133,17 +148,25 @@ export default function Navbar() {
             href="https://booking.easysalon.vn/son-barbershop"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 block text-center font-bold text-xl"
+            className="mt-4 block text-center font-bold text-2xl"
             style={{
               background: "linear-gradient(135deg, var(--gold-500), var(--gold-600))",
               color: "var(--dark-950)",
-              padding: "12px",
-              borderRadius: "var(--radius-md)",
+              padding: "16px",
+              borderRadius: "10px",
+              boxShadow: "0 0 10px var(--box-shadow-gold)",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "12px",
+              cursor: "pointer",
+              width: "fit-content",
+              margin: "auto",
             }}
           >
-            <Calendar size={20} />
-            Đặt lịh ngay?
+            <Calendar size={24} />
+            Đặt lịch ngay
           </a>
         </div>
       </div>
