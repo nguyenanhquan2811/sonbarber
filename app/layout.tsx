@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Sơn Barber | Hệ thống cắt tóc nam cao cấp tại Nghệ An",
+  title: "Sơn Barber | Hệ thống tóc nam uy tín - đào tạo barber chuyên nghiệp tại Nghệ An",
   description: "Nơi mỗi kiểu tóc là một tác phẩm nghệ thuật. Dịch vụ cắt tóc nam, hóa chất tạo kiểu và đào tạo Barber chuyên nghiệp tại Nghệ An.",
 };
 

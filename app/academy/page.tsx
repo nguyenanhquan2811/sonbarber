@@ -137,7 +137,7 @@ export default function AcademyPage() {
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="bg-dark-900 p-6 rounded-xl border border-white/5">
                 <Trophy className="text-gold-500 mb-4" size={32} />
-                <h4 className="text-3xl font-bold text-white mb-2">8+</h4>
+                <h4 className="text-3xl font-bold text-white mb-2">{new Date().getFullYear() - 2017}+</h4>
                 <p className="text-zinc-500 text-sm">Năm Kinh Nghiệm</p>
               </div>
               <div className="bg-dark-900 p-6 rounded-xl border border-white/5">
