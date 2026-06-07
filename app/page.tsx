@@ -138,7 +138,7 @@ export default function Home() {
             </p>
             <div className="pt-4">
               <Link
-                href="/contact"
+                href="https://www.facebook.com/son201093"
                 className="inline-flex items-center font-semibold group transition-colors duration-[250ms]"
                 style={{ color: "var(--gold-500)", fontSize: "1rem" }}
               >
