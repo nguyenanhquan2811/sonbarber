@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+/* ============================================
+   SONBARBER — BLACK & GOLD LUXURY THEME
+   Based on style.md specification
+   ============================================ */
+
+:root {
+  /* Gold scale */
+  --gold-50: #fefce8;
+  --gold-100: #fef9c3;
+  --gold-200: #fef08a;
+  --gold-300: #fde047;
+  --gold-400: #facc15;
+  --gold-500: #d4a017;
+  --gold-600: #b8860b;
+  --gold-700: #96700a;
+  --gold-800: #7c5e10;
+  --gold-900: #6b4f0f;
+
+  /* Dark scale */
+  --dark-50: #f8f8f8;
+  --dark-100: #e8e8e8;
+  --dark-200: #d0d0d0;
+  --dark-300: #a0a0a0;
+  --dark-400: #707070;
+  --dark-600: #383838;
+  --dark-700: #282828;
+  --dark-800: #1a1a1a;
+  --dark-900: #0d0d0d;
+  --dark-950: #050505;
+
+  /* Semantic */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* Spacing */
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadow */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 4px 20px rgba(212, 160, 23, 0.3);
+
+  /* Font */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Transition */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* ---- Tailwind v4 @theme tokens ---- */
+@theme {
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-900: var(--gold-900);
+
+  --color-dark-50: var(--dark-50);
+  --color-dark-100: var(--dark-100);
+  --color-dark-200: var(--dark-200);
+  --color-dark-300: var(--dark-300);
+  --color-dark-400: var(--dark-400);
+  --color-dark-600: var(--dark-600);
+  --color-dark-700: var(--dark-700);
+  --color-dark-800: var(--dark-800);
+  --color-dark-900: var(--dark-900);
+  --color-dark-950: var(--dark-950);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --animate-fade-in-up: fadeInUp 0.6s ease forwards;
+}
+
+/* ---- Base ---- */
+body {
+  background: var(--dark-950);
+  color: var(--dark-100);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(212, 160, 23, 0.35);
+  color: var(--dark-50);
+}
+
+/* ---- Typography ---- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--dark-50);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+/* ---- Animation ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes goldPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px rgba(212, 160, 23, 0.15);
+  }
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-600);
+}
+
+/* ---- Focus Ring ---- */
+*:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(212, 160, 23, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(212, 160, 23, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, var(--dark-950) 0%, var(--dark-900) 50%, var(--dark-950) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 var(--space-md);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  margin-bottom: var(--space-lg);
+  line-height: 1.1;
+  white-space: normal;
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    white-space: nowrap;
+  }
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: var(--dark-300);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: auto;
+}
+
+/* ---- Decorative Elements ---- */
+.hero-deco {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-deco-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--gold-600);
+  top: -100px;
+  right: -100px;
+  opacity: 0.08;
+}
+
+.hero-deco-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--gold-500);
+  bottom: -50px;
+  left: -50px;
+  opacity: 0.06;
+}
+
+/* ---- Utilities ---- */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-line {
+  display: inline-block;
+  border-bottom: 2px solid var(--gold-600);
+  padding-bottom: 4px;
+}
+
+.section-padding {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+}
