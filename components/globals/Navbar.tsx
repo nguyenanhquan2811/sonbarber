@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -134,7 +134,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 block text-center font-bold text-base"
+            className="mt-4 block text-center font-bold text-xl"
             style={{
               background: "linear-gradient(135deg, var(--gold-500), var(--gold-600))",
               color: "var(--dark-950)",
@@ -142,7 +142,8 @@ export default function Navbar() {
               borderRadius: "var(--radius-md)",
             }}
           >
-            Đặt lịch ngay
+            <Calendar size={20} />
+            Đặt lịh ngay?
           </a>
         </div>
       </div>

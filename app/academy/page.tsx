@@ -2,9 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { CheckCircle, Trophy, Users, BookOpen, Link } from "lucide-react";
-
+import { CheckCircle, Trophy, Users, BookOpen, Phone } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+
+const FacebookIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} style={style}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
 
 interface CourseItem {
   name: string;
@@ -202,7 +207,15 @@ export default function AcademyPage() {
         <div className="max-w-2xl mx-auto bg-dark-900 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
           <div className="text-center mb-10">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Đăng Ký Khóa Học Barber</h2>
-            <p className="text-zinc-400">Để biết thêm chi tiết về khóa học, vui lòng liên hệ <Link href="https://www.facebook.com/ThaiSonBarber" target="_blank" className="text-gold-500 hover:text-gold-400 underline transition-colors">fanpage chính thức của Sơn Barber shop</Link> nhé!</p>
+            <p className="text-zinc-400 flex flex-col gap-4">
+              Để biết thêm chi tiết về khóa học, vui lòng liên hệ:
+              <div className="flex flex-row justify-center items-center gap-4"><Phone className="text-gold-500" />
+                <a href="tel:0961202341" className="font-bold text-xl text-white">0961 202 341</a>
+              </div>
+              <div className="flex flex-row justify-center items-center gap-4"><FacebookIcon className="text-gold-500" />
+                <a href="https://www.facebook.com/ThaiSonBarber" target="_blank" className="font-bold text-lg text-white wrap-text-none">Sơn Barber Shop</a>
+              </div>
+            </p>
           </div>
         </div>
       </section>

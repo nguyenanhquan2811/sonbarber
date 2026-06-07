@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Phone, MapPin, Calendar } from "lucide-react";
 
 // Mock Data
 const branches = [
@@ -39,8 +39,26 @@ const branches = [
 ];
 
 const FacebookIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} style={style}>
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}>
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const TiktokIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}>
+    <path d="M14 2v10.2a4.2 5.2 0 1 1-2.6-3.9V5.1c-3.9.4-6.9 3.6-6.9 7.6A6.8 7.5 0 1 0 19.1 13V7.2c1.2.9 2.5 1.5 3.9 1.6V6.1c-2.5-.5-4.6-2.4-5.3-4.1H14z" />
   </svg>
 );
 
@@ -105,31 +123,40 @@ export default function ContactPage() {
 
       {/* Main Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-16"> */}
 
-          {/* Left: Contact Info & Form */}
-          <div className="space-y-12 animate-[fadeInUp_0.5s_ease-out_forwards]">
-            <div>
-              <h2 className="font-serif text-3xl font-bold text-white mb-6">Thông tin hỗ trợ</h2>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-zinc-300">
-                  <div className="bg-gold-500/10 p-3 rounded-full"><Phone className="text-gold-500" /></div>
-                  <div>
-                    <p className="text-sm text-zinc-500">Hotline toàn hệ thống</p>
-                    <a href="tel:0961202341" className="font-bold text-xl text-white">0961 202 341</a>
-                  </div>
+        {/* Contact Info & Form */}
+        <div className="space-y-12 animate-[fadeInUp_0.5s_ease-out_forwards]">
+          <div>
+            <h2 className="font-serif text-3xl font-bold text-white mb-6">Thông tin hỗ trợ</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-zinc-300">
+                <div className="bg-gold-500/10 p-3 rounded-full"><Phone className="text-gold-500" /></div>
+                <div>
+                  <p className="text-sm text-zinc-500">Hotline toàn hệ thống</p>
+                  <a href="tel:0961202341" className="font-bold text-xl text-white">0961 202 341</a>
                 </div>
+              </div>
+              <div className="flex items-center gap-4 text-zinc-300">
+                <div className="bg-gold-500/10 p-3 rounded-full"><FacebookIcon className="text-gold-500" /></div>
+                <div>
+                  <p className="text-sm text-zinc-500">FanPage</p>
+                  <a href="https://www.facebook.com/ThaiSonBarber" target="_blank" className="font-bold text-lg text-white">Sơn Barber Shop</a>
+                </div>
+              </div>
+              <div>
                 <div className="flex items-center gap-4 text-zinc-300">
-                  <div className="bg-gold-500/10 p-3 rounded-full"><FacebookIcon className="text-gold-500" /></div>
+                  <div className="bg-gold-500/10 p-3 rounded-full"><TiktokIcon className="text-gold-500" /></div>
                   <div>
-                    <p className="text-sm text-zinc-500">FanPage</p>
-                    <a href="https://www.facebook.com/ThaiSonBarber" target="_blank" className="font-bold text-lg text-white">Sơn Barber Shop</a>
+                    <p className="text-sm text-zinc-500">Tiktok</p>
+                    <a href="https://www.tiktok.com/@sonbarbershop?_r=1&_d=secCgYIASAHKAESPgo8YTgdg8gIe8SiGijQxfXfo7Fc5AFqQBnR9M2Vds6VMlVNjMP4DaBtKqH%2FezfLl6BCh26huwFf74bIZPIIGgA%3D&_svg=1&checksum=1778f098904d33feb23c9b6847e0e6776c8974c9b9b3e95ce295576e19a67de2&item_author_type=1&reflow_sign_scene=7&rgssign=8.1.Jjkigi_uAWlvsouzcr4e-A&sec_uid=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&sec_user_id=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&share_app_id=1180&share_author_id=7183654472126858267&share_link_id=5258D9A0-DE5B-4EA8-AED2-761C58AA0142&share_region=VN&share_scene=1&sharer_language=vi&social_share_type=4&source=h5_t&timestamp=1778772943&tt_from=copy&u_code=e5ia430h69mila&ug_btm=b8727%2Cb0&user_id=7183654472126858267&utm_campaign=client_share&utm_medium=ios&utm_source=copyktok.com/@barber_thai_son" target="_blank" className="font-bold text-xl text-white">Sơn Barber Shop</a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="bg-dark-900 p-8 rounded-2xl border border-white/10">
+          {/* <div className="bg-dark-900 p-8 rounded-2xl border border-white/10">
               <h3 className="font-serif text-2xl font-bold text-white mb-6">Gửi lời nhắn cho chúng tôi</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -174,58 +201,87 @@ export default function ContactPage() {
                   {loading ? "Đang gửi..." : "Gửi tin nhắn"}
                 </button>
               </form>
-            </div>
+            </div> */}
+        </div>
+
+
+        {/* Branches */}
+        <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '50px' }}>
+          <h2 className="font-serif text-3xl font-bold text-white mb-6">Hệ thống Chi nhánh</h2>
+
+          {/* Iframe Google Maps (Cơ sở 2) */}
+          <p>Cơ sở chính toạ lạc tại 76 Lý Thường Kiệt, phường Thành Vinh, tỉnh Nghệ An:</p>
+          <div className="w-full h-64 bg-dark-800 rounded-2xl mb-8 overflow-hidden border border-white/10 relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.643176364686!2d105.670439!3d18.6800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce6955144e0b%3A0xc90e5e7e5700327!2zNzYgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFRow6BuaCBWaW5oLCBOZ2jhu4cgQW4sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1780815491338!5m2!1svi!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 contrast-125 opacity-80"
+            ></iframe>
           </div>
 
-          {/* Right: Branches */}
-          <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]" style={{ animationFillMode: 'forwards', opacity: 0 }}>
-            <h2 className="font-serif text-3xl font-bold text-white mb-6">Hệ thống Chi nhánh</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {branches.map((branch, i) => (
+              <div key={i} className="bg-dark-900 p-5 rounded-xl border border-white/5 hover:border-gold-500/50 transition-colors">
+                <h4 className="font-bold text-white text-lg mb-2">{branch.name}</h4>
+                <p className="text-zinc-400 text-sm mb-1 flex items-start gap-2">
+                  <MapPin size={16} className="text-gold-500 shrink-0 mt-0.5" />
+                  <span>{branch.address}</span>
+                </p>
+                <p className="text-zinc-400 text-sm mb-1 flex items-center gap-2">
+                  <Phone size={16} className="text-gold-500" />
+                  <span>{branch.phone}</span>
+                </p>
+                <p className="text-zinc-500 text-xs mt-3 mb-3">Mở cửa: {branch.hours}</p>
 
-            <div className="w-full h-64 bg-dark-800 rounded-2xl mb-8 overflow-hidden border border-white/10 relative">
-              {/* Iframe Google Maps (Cơ sở 2) */}
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.80556093551!2d105.66668741489626!3d18.6727221873199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce67098491bb%3A0xc6eb91b5c46d3e8e!2s76%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20L%C3%AA%20L%E1%BB%A3i%2C%20Th%C3%A0nh%20ph%E1%BB%91%20Vinh%2C%20Ngh%E1%BB%87%20An!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 grayscale contrast-125 opacity-80"
-              ></iframe>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {branches.map((branch, i) => (
-                <div key={i} className="bg-dark-900 p-5 rounded-xl border border-white/5 hover:border-gold-500/50 transition-colors">
-                  <h4 className="font-bold text-white text-lg mb-2">{branch.name}</h4>
-                  <p className="text-zinc-400 text-sm mb-1 flex items-start gap-2">
-                    <MapPin size={16} className="text-gold-500 shrink-0 mt-0.5" />
-                    <span>{branch.address}</span>
-                  </p>
-                  <p className="text-zinc-400 text-sm mb-1 flex items-center gap-2">
-                    <Phone size={16} className="text-gold-500" />
-                    <span>{branch.phone}</span>
-                  </p>
-                  <p className="text-zinc-500 text-xs mt-3 mb-3">Mở cửa: {branch.hours}</p>
-
-                  <div className="flex gap-3">
-                    <a href={branch.map} target="_blank" rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
-                      <MapPin size={12} />  Chỉ đường
+                <div className="flex gap-3">
+                  <a href={branch.map} target="_blank" rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
+                    <MapPin size={12} />  Chỉ đường
+                  </a>
+                  {branch.fanpage && (
+                    <a href={branch.fanpage} target="_blank" rel="noopener noreferrer" className="text-xs bg-gold-500/10 hover:bg-gold-500/20 text-gold-500 px-3 py-1.5 rounded flex items-center gap-1 transition-colors">
+                      <FacebookIcon size={12} />Fanpage
                     </a>
-                    {branch.fanpage && (
-                      <a href={branch.fanpage} target="_blank" rel="noopener noreferrer" className="text-xs bg-gold-500/10 hover:bg-gold-500/20 text-gold-500 px-3 py-1.5 rounded flex items-center gap-1 transition-colors">
-                        <FacebookIcon size={12} />Fanpage
-                      </a>
-                    )}
-                    <a href={`tel:${branch.phone}`} rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
-                      <Phone size={12} />Gọi ngay
-                    </a>
-                  </div>
+                  )}
+                  <a href={`tel:${branch.phone}`} rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
+                    <Phone size={12} />Gọi ngay
+                  </a>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* CTA đặt lịch ngay */}
+        <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '50px' }}>
+          <a
+            href="https://booking.easysalon.vn/son-barbershop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block text-center font-bold text-3xl"
+            style={{
+              background: "linear-gradient(135deg, var(--gold-500), var(--gold-600))",
+              color: "var(--dark-950)",
+              padding: "16px",
+              borderRadius: "10px",
+              boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "12px",
+              cursor: "pointer",
+              width: "fit-content",
+              margin: "auto",
+            }}
+          >
+            <Calendar size={36} />
+            Đặt lịch ngay
+          </a>
         </div>
       </section>
     </div>
