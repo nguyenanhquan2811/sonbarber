@@ -202,7 +202,7 @@ export default function AcademyPage() {
         <div className="max-w-2xl mx-auto bg-dark-900 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
           <div className="text-center mb-10">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Đăng Ký Khóa Học Barber</h2>
-            <p className="text-zinc-400">Để biết thêm chi tiết về khóa học, vui lòng liên hệ <Link href="https://www.facebook.com/ThaiSonBarber" target="_blank" rel="noopener noreferrer" className="text-gold-500 hover:text-gold-400 underline transition-colors">fanpage chính thức của Sơn Barber shop</Link> nhé!</p>
+            <p className="text-zinc-400">Để biết thêm chi tiết về khóa học, vui lòng liên hệ <Link href="https://www.facebook.com/ThaiSonBarber" target="_blank" className="text-gold-500 hover:text-gold-400 underline transition-colors">fanpage chính thức của Sơn Barber shop</Link> nhé!</p>
           </div>
         </div>
       </section>
