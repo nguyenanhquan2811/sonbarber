@@ -196,7 +196,15 @@ export default function AcademyPage() {
       </section>
 
       {/* Registration Form */}
-      <section id="register" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* chi tiết khoá học vui lòng liên hệ fanpage chính của Sơn Barber shop. */}
+      <section>
+        <h2 className="font-serif text-4xl font-bold text-white mb-4">Đăng Ký Khóa Học Barber</h2>
+        <p className="text-zinc-400">Để biết thêm chi tiết về khóa học, vui lòng liên hệ fanpage chính thức của Sơn Barber shop.</p>
+        <Link href="https://www.facebook.com/ThaiSonBarber" className="mt-auto w-full bg-transparent hover:bg-gold-500 text-gold-500 hover:text-black border-2 border-gold-500 px-6 py-3 rounded-lg font-bold transition-colors">
+          Đăng ký khóa học
+        </Link>
+      </section>
+      {/* <section id="register" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gold-500/10 blur-[100px] -z-10 rounded-full"></div>
         <div className="max-w-2xl mx-auto bg-dark-900 p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
           <div className="text-center mb-10">
@@ -269,7 +277,7 @@ export default function AcademyPage() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
