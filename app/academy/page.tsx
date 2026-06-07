@@ -160,7 +160,7 @@ export default function AcademyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-white mb-4">Các Khóa Đào Tạo</h2>
-            <p className="text-zinc-400">Lộ trình học bài bản, giáo trình chuẩn hóa quốc tế.</p>
+            <p className="text-zinc-400">Lộ trình học bài bản, giáo trình tâm huyết độc quyền chỉ có tại Sơn Barber.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
