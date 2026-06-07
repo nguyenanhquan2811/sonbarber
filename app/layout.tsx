@@ -15,8 +15,45 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Sơn Barber | Hệ thống tóc nam uy tín - đào tạo barber chuyên nghiệp tại Nghệ An",
-  description: "Nơi mỗi kiểu tóc là một tác phẩm nghệ thuật. Dịch vụ cắt tóc nam, hóa chất tạo kiểu và đào tạo Barber chuyên nghiệp tại Nghệ An.",
+  title: {
+    default: "Sơn Barber | Hệ thống tóc nam uy tín - đào tạo barber chuyên nghiệp tại Nghệ An",
+    template: "%s | Sơn Barber",
+  },
+  description:
+    "Nơi mỗi kiểu tóc là một tác phẩm nghệ thuật. Dịch vụ cắt tóc nam, hóa chất tạo kiểu và đào tạo Barber chuyên nghiệp tại Nghệ An.",
+
+  keywords: [
+    "Sơn Barber",
+    "barber Nghệ An",
+    "cắt tóc nam Nghệ An",
+    "tiệm tóc nam",
+    "đào tạo barber",
+    "uốn tóc nam",
+    "nhuộm tóc nam",
+  ],
+
+  authors: [{ name: "Sơn Barber" }],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Sơn Barber | Hệ thống tóc nam uy tín - đào tạo barber chuyên nghiệp tại Nghệ An",
+    description:
+      "Nơi mỗi kiểu tóc là một tác phẩm nghệ thuật. Dịch vụ cắt tóc nam, hóa chất tạo kiểu và đào tạo Barber chuyên nghiệp tại Nghệ An.",
+    url: "https://sonbarber.vercel.app",
+    siteName: "Sơn Barber",
+    locale: "vi_VN",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
