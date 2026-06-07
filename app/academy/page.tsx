@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { CheckCircle, Trophy, Users, BookOpen } from "lucide-react";
+import { CheckCircle, Trophy, Users, BookOpen, Link } from "lucide-react";
 
 import { supabase } from "@/lib/supabase";
 
