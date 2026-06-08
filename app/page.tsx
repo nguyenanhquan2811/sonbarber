@@ -1,7 +1,66 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Scissors, GraduationCap, MapPin } from "lucide-react";
+import { ArrowRight, Scissors, GraduationCap, MapPin, Phone } from "lucide-react";
+
+// Mock Data
+const branches = [
+  {
+    name: "Cơ sở 1",
+    address: "89 Yên Lâm, TP Vinh",
+    phone: "0985 645 872",
+    hours: "08:00 - 19:00",
+    map: "https://maps.app.goo.gl/wqoutcouXedBes3U6",
+    fanpage: "https://www.facebook.com/profile.php?id=100091936048068"
+  },
+  {
+    name: "Cơ sở 2 & Academy",
+    address: "76 Lý Thường Kiệt, TP Vinh",
+    phone: "0961 202 341",
+    hours: "08:00 - 19:00",
+    map: "https://maps.app.goo.gl/YTN4auq3xWhJQ9jz5",
+    fanpage: "https://www.facebook.com/profile.php?id=100064840806630"
+  },
+  {
+    name: "Cơ sở 3",
+    address: "145 Hà Huy Tập, TP Vinh",
+    phone: "0971 039 937",
+    hours: "08:00 - 19:00",
+    map: "https://maps.app.goo.gl/p3cqvvpLThjV7nRh9"
+  },
+  {
+    name: "Chi nhánh KTX",
+    address: "KTX Luxshare ICT",
+    phone: "0979 783 193",
+    hours: "08:00 - 19:00",
+    map: "https://maps.app.goo.gl/kA3yVD4Q5Rr8JTB9A",
+    fanpage: "https://www.facebook.com/profile.php?id=61566396022877"
+  }
+];
+
+const FacebookIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const TiktokIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}>
+    <path d="M14 2v10.2a4.2 5.2 0 1 1-2.6-3.9V5.1c-3.9.4-6.9 3.6-6.9 7.6A6.8 7.5 0 1 0 19.1 13V7.2c1.2.9 2.5 1.5 3.9 1.6V6.1c-2.5-.5-4.6-2.4-5.3-4.1H14z" />
+  </svg>
+);
 
 export default function Home() {
   return (
@@ -277,8 +336,8 @@ export default function Home() {
 
       {/* ====== BRANCHES ====== */}
       <section className="section-padding px-4" style={{ background: "var(--dark-900)" }}>
-        <div className="max-w-[1200px] mx-auto">
-          {/* Section Header */}
+        {/* <div className="max-w-[1200px] mx-auto">
+        {/* Section Header
           <div className="text-center mb-16">
             <h2
               className="gold-line font-bold inline-block"
@@ -333,8 +392,57 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </div> */}
+        <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '50px' }}>
+          <h2 className="font-serif text-3xl font-bold text-white mb-6">Hệ thống Chi nhánh</h2>
+
+          {/* Iframe Google Maps (Cơ sở 2) */}
+          <p>Cơ sở chính toạ lạc tại 76 Lý Thường Kiệt, phường Thành Vinh, tỉnh Nghệ An:</p>
+          <div className="w-full h-64 bg-dark-800 rounded-2xl mb-8 overflow-hidden border border-white/10 relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.643176364686!2d105.670439!3d18.6800015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce6955144e0b%3A0xc90e5e7e5700327!2zNzYgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFRow6BuaCBWaW5oLCBOZ2jhu4cgQW4sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1780815491338!5m2!1svi!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 contrast-125 opacity-80"
+            ></iframe>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {branches.map((branch, i) => (
+              <div key={i} className="p-5 rounded-xl border border-white/5 hover:border-gold-500/50 transition-colors" style={{ background: "var(--dark-950)" }}>
+                <h4 className="font-bold text-white text-lg mb-2">{branch.name}</h4>
+                <p className="text-zinc-400 text-sm mb-1 flex items-start gap-2">
+                  <MapPin size={16} className="text-gold-500 shrink-0 mt-0.5" />
+                  <span>{branch.address}</span>
+                </p>
+                <p className="text-zinc-400 text-sm mb-1 flex items-center gap-2">
+                  <Phone size={16} className="text-gold-500" />
+                  <span>{branch.phone}</span>
+                </p>
+                <p className="text-zinc-500 text-xs mt-3 mb-3">Mở cửa: {branch.hours}</p>
+
+                <div className="flex gap-3">
+                  <a href={branch.map} target="_blank" rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
+                    <MapPin size={12} />  Chỉ đường
+                  </a>
+                  {branch.fanpage && (
+                    <a href={branch.fanpage} target="_blank" rel="noopener noreferrer" className="text-xs bg-gold-500/10 hover:bg-gold-500/20 text-gold-500 px-3 py-1.5 rounded flex items-center gap-1 transition-colors">
+                      <FacebookIcon size={12} />Fanpage
+                    </a>
+                  )}
+                  <a href={`tel:${branch.phone}`} rel="noopener noreferrer" className="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded text-white flex items-center gap-1 transition-colors">
+                    <Phone size={12} />Gọi ngay
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }

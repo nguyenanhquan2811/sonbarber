@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
   keywords: [
     "Sơn Barber",
+    "sơn barber shop",
     "barber Nghệ An",
     "cắt tóc nam Nghệ An",
     "tiệm tóc nam",

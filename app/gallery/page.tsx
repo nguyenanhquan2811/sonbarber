@@ -7,12 +7,66 @@ import { X, Calendar, ArrowRight } from "lucide-react";
 
 // Mock Data
 const galleryImages = [
-  { id: 1, category: "Kiểu tóc uốn", src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800&auto=format&fit=crop" },
-  { id: 2, category: "Kiểu tóc nhuộm thời trang", src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop" },
-  { id: 3, category: "Không gian cơ sở", src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop" },
-  { id: 4, category: "Kiểu tóc uốn", src: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=800&auto=format&fit=crop" },
-  { id: 5, category: "Hoạt động sự kiện", src: "https://images.unsplash.com/photo-1593702288056-cc3dc679cbce?q=80&w=800&auto=format&fit=crop" },
-  { id: 6, category: "Không gian cơ sở", src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" },
+  {
+    id: 1,
+    category: "Kiểu tóc uốn",
+    src: "/gallery/Gallery-Barber-Son/1.jpeg"
+  },
+  {
+    id: 2,
+    category: "Kiểu tóc nhuộm thời trang",
+    src: "/gallery/Gallery-Barber-Son/2.jpeg"
+  },
+  {
+    id: 3,
+    category: "Không gian cơ sở",
+    src: "/gallery/Gallery-Barber-Son/3.jpeg"
+  },
+  {
+    id: 4,
+    category: "Kiểu tóc uốn",
+    src: "/gallery/Gallery-Barber-Son/4.jpeg"
+  },
+  {
+    id: 5,
+    category: "Hoạt động sự kiện",
+    src: "/gallery/Gallery-Barber-Son/5.jpeg"
+  },
+  {
+    id: 6,
+    category: "Không gian cơ sở",
+    src: "/gallery/Gallery-Barber-Son/6.jpeg"
+  },
+  {
+    id: 7,
+    category: "Kiểu tóc uốn",
+    src: "/gallery/Gallery-Barber-Son/7.jpeg"
+  },
+  {
+    id: 8,
+    category: "Kiểu tóc nhuộm thời trang",
+    src: "/gallery/Gallery-Barber-Son/8.jpeg"
+  },
+  {
+    id: 9,
+    category: "Không gian cơ sở",
+    src: "/gallery/Gallery-Barber-Son/9.jpeg"
+  },
+  {
+    id: 10,
+    category: "Kiểu tóc uốn",
+    src: "/gallery/Gallery-Barber-Son/10.jpeg"
+  },
+  {
+    id: 11,
+    category: "Hoạt động sự kiện",
+    src: "/gallery/Gallery-Barber-Son/11.jpeg"
+  },
+  {
+    id: 12,
+    category: "Không gian cơ sở",
+    src: "/gallery/Gallery-Barber-Son/12.jpeg"
+  },
 ];
 
 const blogPosts = [
@@ -48,8 +102,8 @@ export default function GalleryBlogPage() {
 
   const filterTabs = ["Tất cả", "Kiểu tóc uốn", "Kiểu tóc nhuộm thời trang", "Không gian cơ sở", "Hoạt động sự kiện"];
 
-  const filteredGallery = activeTab === "Tất cả" 
-    ? galleryImages 
+  const filteredGallery = activeTab === "Tất cả"
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeTab);
 
   return (
@@ -80,11 +134,10 @@ export default function GalleryBlogPage() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                activeTab === tab 
-                  ? "bg-gold-500 text-black" 
-                  : "bg-dark-900 text-zinc-400 hover:text-white border border-white/10"
-              }`}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeTab === tab
+                ? "bg-gold-500 text-black"
+                : "bg-dark-900 text-zinc-400 hover:text-white border border-white/10"
+                }`}
             >
               {tab}
             </button>
@@ -94,15 +147,23 @@ export default function GalleryBlogPage() {
         {/* Masonry Grid Simulation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-[fadeInUp_0.5s_ease-out_forwards]">
           {filteredGallery.map((img) => (
-            <div 
-              key={img.id} 
+            <div
+              key={img.id}
               className="relative aspect-square overflow-hidden rounded-xl group cursor-pointer border border-white/5"
               onClick={() => setLightboxImg(img.src)}
             >
-              <Image
+              {/* <Image
                 src={img.src}
                 alt={img.category}
                 fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              /> */}
+              <Image
+                src={`/gallery/Gallery-Barber-Son/${img.id}.jpeg`}
+                alt={img.category}
+                width={500}
+                height={500}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -126,12 +187,12 @@ export default function GalleryBlogPage() {
           {blogPosts.map((post, idx) => (
             <Link href={`/blog/${post.slug}`} key={idx} className="group flex flex-col bg-dark-900 rounded-2xl overflow-hidden border border-white/10 hover:border-gold-500/30 transition-colors">
               <div className="relative h-56 overflow-hidden">
-                <Image
+                {/* <Image
                   src={post.image}
                   alt={post.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                /> */}
                 <div className="absolute top-4 left-4 bg-gold-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase">
                   {post.category}
                 </div>
@@ -159,7 +220,7 @@ export default function GalleryBlogPage() {
       {/* Lightbox Modal */}
       {lightboxImg && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm" onClick={() => setLightboxImg(null)}>
-          <button 
+          <button
             className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/10 rounded-full p-2 transition-colors"
             onClick={() => setLightboxImg(null)}
           >
