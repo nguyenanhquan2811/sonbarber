@@ -125,7 +125,7 @@ export default function ContactPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-16"> */}
 
-        {/* Contact Info & Form */}
+        {/* Contact Info */}
         <div className="space-y-12 animate-[fadeInUp_0.5s_ease-out_forwards]">
           <div>
             <h2 className="font-serif text-3xl font-bold text-white mb-6">Thông tin hỗ trợ</h2>

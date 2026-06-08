@@ -335,6 +335,7 @@ export default function Home() {
       </section>
 
       {/* ====== BRANCHES ====== */}
+      {/* <section className="section-padding px-4" style={{ background: "var(--dark-900)" }}> */}
       <section className="section-padding px-4" style={{ background: "var(--dark-900)" }}>
         {/* <div className="max-w-[1200px] mx-auto">
         {/* Section Header
@@ -393,7 +394,7 @@ export default function Home() {
             ))}
           </div>
         </div> */}
-        <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '50px' }}>
+        <div className="space-y-6 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards] max-w-[1200px] mx-auto" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '50px' }}>
           <h2 className="font-serif text-3xl font-bold text-white mb-6">Hệ thống Chi nhánh</h2>
 
           {/* Iframe Google Maps (Cơ sở 2) */}
