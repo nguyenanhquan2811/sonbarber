@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/globals/Navbar";
 import Footer from "@/components/globals/Footer";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     default: "Sơn Barber | Hệ thống tóc nam uy tín - đào tạo barber chuyên nghiệp tại Nghệ An",
     template: "%s | Sơn Barber",
   },
+  applicationName: "Sơn Barber",
   description:
     "Nơi mỗi kiểu tóc là một tác phẩm nghệ thuật. Dịch vụ cắt tóc nam, hóa chất tạo kiểu và đào tạo Barber chuyên nghiệp tại Nghệ An.",
 
@@ -68,6 +70,19 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Sơn Barber",
+              url: "https://sonbarber.vercel.app",
+            }),
+          }}
+        />
         <Navbar />
         <main className="flex-1">
           {children}
