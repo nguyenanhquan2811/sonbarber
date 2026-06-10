@@ -206,6 +206,22 @@ export default function Home() {
                 <ArrowRight className="ml-2 transform group-hover:translate-x-2 transition-transform duration-[250ms]" size={18} />
               </Link>
             </div>
+            <div className="flex items-center gap-4 text-zinc-300">
+              <div className="bg-gold-500/10 p-3 rounded-full"><FacebookIcon className="text-gold-500" /></div>
+              <div>
+                <p className="text-sm text-zinc-500">Facebook</p>
+                <a href="https://www.facebook.com/son201093" target="_blank" className="font-bold text-lg text-white">Nguyễn Thái Sơn</a>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-4 text-zinc-300">
+                <div className="bg-gold-500/10 p-3 rounded-full"><TiktokIcon className="text-gold-500" /></div>
+                <div>
+                  <p className="text-sm text-zinc-500">Tiktok</p>
+                  <a href="https://www.tiktok.com/@sonbarbershop?_r=1&_d=secCgYIASAHKAESPgo8YTgdg8gIe8SiGijQxfXfo7Fc5AFqQBnR9M2Vds6VMlVNjMP4DaBtKqH%2FezfLl6BCh26huwFf74bIZPIIGgA%3D&_svg=1&checksum=1778f098904d33feb23c9b6847e0e6776c8974c9b9b3e95ce295576e19a67de2&item_author_type=1&reflow_sign_scene=7&rgssign=8.1.Jjkigi_uAWlvsouzcr4e-A&sec_uid=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&sec_user_id=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&share_app_id=1180&share_author_id=7183654472126858267&share_link_id=5258D9A0-DE5B-4EA8-AED2-761C58AA0142&share_region=VN&share_scene=1&sharer_language=vi&social_share_type=4&source=h5_t&timestamp=1778772943&tt_from=copy&u_code=e5ia430h69mila&ug_btm=b8727%2Cb0&user_id=7183654472126858267&utm_campaign=client_share&utm_medium=ios&utm_source=copyktok.com/@barber_thai_son" target="_blank" className="font-bold text-xl text-white">Sơn Barber Shop</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -298,7 +314,7 @@ export default function Home() {
               <GraduationCap style={{ color: "var(--gold-500)" }} size={28} />
             </div>
             <h2 className="font-bold mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--dark-50)", fontSize: "clamp(1.5rem, 3vw, 2rem)" }}>
-              Sơn Barber Academy
+              Sơn Academy
             </h2>
             <p className="mb-8" style={{ color: "var(--dark-300)", lineHeight: 1.6 }}>
               Khóa học đào tạo nghề barber chuyên nghiệp trọn gói không giấu nghề. Hơn 30 khóa học viên đã tốt nghiệp và tự tin mở tiệm.
