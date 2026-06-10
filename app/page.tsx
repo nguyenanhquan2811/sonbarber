@@ -62,6 +62,18 @@ const TiktokIcon = ({ size = 24, className = "", style }: { size?: number; class
   </svg>
 );
 
+const InstagramIcon = ({ size = 24, className = "", style }: { size?: number; className?: string; style?: React.CSSProperties }) => (
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}>
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.196-7.56 3.404-7.758 7.758-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.667.073 4.948.196 4.358 3.404 7.564 7.758 7.758 1.281.058 1.689.072 4.948.072 3.259 0 3.667-.014 4.948-.072 4.354-.196 7.564-3.404 7.758-7.758.059-1.281.073-1.689.073-4.948 0-3.259-.014-3.667-.073-4.948-.196-4.354-3.404-7.563-7.758-7.758-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.163c-2.263 0-4.098-1.835-4.098-4.098s1.835-4.098 4.098-4.098 4.098 1.835 4.098 4.098-1.835 4.098-4.098 4.098zm2.904-9.478c-.579 0-1.05.47-1.05 1.05s.47 1.05 1.05 1.05 1.05-.47 1.05-1.05-.47-1.05-1.05-1.05z" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -219,6 +231,15 @@ export default function Home() {
                 <div>
                   <p className="text-sm text-zinc-500">Tiktok</p>
                   <a href="https://www.tiktok.com/@sonbarbershop?_r=1&_d=secCgYIASAHKAESPgo8YTgdg8gIe8SiGijQxfXfo7Fc5AFqQBnR9M2Vds6VMlVNjMP4DaBtKqH%2FezfLl6BCh26huwFf74bIZPIIGgA%3D&_svg=1&checksum=1778f098904d33feb23c9b6847e0e6776c8974c9b9b3e95ce295576e19a67de2&item_author_type=1&reflow_sign_scene=7&rgssign=8.1.Jjkigi_uAWlvsouzcr4e-A&sec_uid=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&sec_user_id=MS4wLjABAAAAgtwh0KlLw_RO7GiznOCbw0n_owNySz0kMn80xeRWzRWBXN8EmkK-Ju4H9yBXFDTR&share_app_id=1180&share_author_id=7183654472126858267&share_link_id=5258D9A0-DE5B-4EA8-AED2-761C58AA0142&share_region=VN&share_scene=1&sharer_language=vi&social_share_type=4&source=h5_t&timestamp=1778772943&tt_from=copy&u_code=e5ia430h69mila&ug_btm=b8727%2Cb0&user_id=7183654472126858267&utm_campaign=client_share&utm_medium=ios&utm_source=copyktok.com/@barber_thai_son" target="_blank" className="font-bold text-xl text-white">Sơn Barber Shop</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-4 text-zinc-300">
+                <div className="bg-gold-500/10 p-3 rounded-full"><InstagramIcon className="text-gold-500" /></div>
+                <div>
+                  <p className="text-sm text-zinc-500">Instagram</p>
+                  <a href="https://www.instagram.com/sonbarber/" target="_blank" className="font-bold text-xl text-white">Sơn Barber Shop</a>
                 </div>
               </div>
             </div>
